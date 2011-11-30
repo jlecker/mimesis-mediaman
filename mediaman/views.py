@@ -88,7 +88,7 @@ def media_selector_upload(request):
     if request.method == 'POST':
         if request.FILES:
             media = request.FILES['mediaman-upload-file']
-            (media_type, media_subtype) = (None, None)
+            (media_type, media_subtype) = ('', '')
         else:
             url = request.POST.get('mediaman-embed-url')
             # extract the YouTube video ID
